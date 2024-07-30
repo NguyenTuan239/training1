@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+/* search icon clicked */
+.search-input{
+    overflow: hidden;
+    max-width: 0;
+    transform-origin: right center;
+    &.active{
+        animation: search-input-animate 0.4s ease-in-out forwards;
+    }
+    &.toggled{
+        animation: search-input-animate 0.4s ease-in-out forwards;
+    }
+}
+@keyframes search-input-animate {
+    0%{
+        max-width: 0;
+    }
+    100%{
+        max-width: 200px;
+    }
+}
+.search-icon{
+    transition: all 0.4s ease-in-out ;
+    transform: translateX(0px);
+    &.active{
+        background-color: rgb(28 25 23 );
+        transform: translateX(-40px);
+    }
+    &.toggled{
+        background-color: rgb(28 25 23 );
+        transform: translateX(-40px);
+    }
+}
+.search{
+    &.toggled{
+        transform-origin: top center;
+        animation: toggled 0.2s ease-in-out;
+    }
+}
+@keyframes toggled {
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+/* account button clicked  */
+#account{
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+.account-button{
+    &.toggled{
+        transform-origin: top center;
+        animation: toggled 0.2s ease-in-out;
+    }
+}
+#nav-mobile{
+    scrollbar-color: #5c5b5b #222121;
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    &.active{
+        transform: scaleX(1);
+    }
+}
+#li-1, #li-2, #li-3, #li-3-1, #li-4, #li-4-1, #li-4-2,#li-4-3,#li-5{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    &.active{
+        max-height: 700px;
+    }
+}
+.web-nav-li{
+    border-left-width: 3.5px;
+    border-color: transparent;
+    transition: all 0.5s ease-in;
+    &:hover{
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0.1),rgb(41, 37, 36,0));
+        border-color: rgb(239 68 68);
+    }
+}
+.li-font{
+    font-weight: 300;
+    color: rgb(190, 190, 190);
+    &:hover{
+        color: white;
+    }
+}
+.ft-link{
+    transition: all 0.4s ease-in-out;
+    &:hover{
+        color: red;
+    }
+}
+.follow-icon{
+    transform-origin: center bottom;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(0);
+    &:hover{
+        background-color: red;
+        transform: translateY(-5px);
+    }
+}
+.setting-bar{
+    transition: all 0.5s;
+    &.reactive{
+        transform: translateX(100%);
+    }
+    &.active{
+        transform: translateX(0);
+    }
+    &.reve{
+        transform: translateX(-100%);
+    }
+}
+.netflix{
+    color: rgb(226, 29, 29);
+}
+.netflix-bg{
+    background-color: rgb(223, 3, 3);
+}
+.hotstar{
+    color: rgb(0, 81, 255);
+}

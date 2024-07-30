@@ -1,0 +1,107 @@
+/*pushing a hamburger menu into a pillow texture like background*/
+
+.menuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16%;
+    color: #090909;
+    width: 2em;
+    height: 2.2em;
+    transition: all .3s;
+  &:hover{
+    span {
+      background: rgb(255, 255, 255);
+    }
+  }
+  &:active{
+    color: #666;
+  }
+}
+.menuButton span {
+  width: 25px;
+  height: 3px;
+  background: rgb(180, 179, 179);
+  border-radius: 100px;
+  transition: 0.3s ease;
+}
+.toggle-btn span.top {
+  transform: translateY(290%) rotate(45deg);
+  width: 30px;
+}
+.toggle-btn span.bot {
+  transform: translateY(-270%) rotate(-45deg);
+  width: 30px;
+  box-shadow: 0 0 10px #495057;
+}
+.toggle-btn span.mid {
+  transform: translateX(-5px);
+  opacity: 0;
+}
+  
+@media (min-width: 768px) {
+    .md-hidden {
+      display: none;
+    }
+}
+.mobile-menu{
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: all 0.2s ease-in-out;
+  &.toggled{
+      transform: scaleY(1);
+  }
+}
+
+.plus,.plus1,.plus2,.plus3,.plus31,.plus4,.plus41,.plus42,.plus43,.plus5{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 8px;
+  height: 1px;
+  background-color: rgb(222, 224, 226);
+}
+.plus1,.plus2,.plus3,.plus31,.plus4,.plus41,.plus42,.plus43,.plus5{
+  transform: rotate(90deg) translateY(4px) translateX(-0.5px);
+  &.active{
+    background-color: transparent;
+  }
+}
+.sub-button {
+  position: relative;
+  .sub-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .sub-button1,
+  .sub-button2 {
+    position: absolute;
+    top: 0.5px;
+    bottom: 0.5px;
+    width: 0%;
+    height: auto;
+    background-color: rgba(37, 18, 18, 0.366);
+    z-index: -1;
+    transition: width 0.5s ease-in-out; 
+  }
+
+  .sub-button1 {
+    left: 0;
+  }
+
+  .sub-button2 {
+    right: 0;
+  }
+
+  &:hover .sub-button1,
+  &:hover .sub-button2 {
+    width: 50%; /* expand on hover */
+  }
+}
