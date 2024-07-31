@@ -207,9 +207,11 @@ ltr.addEventListener('click', function() {
     rlt.classList.add('text-zinc-700');
 });
 const hots = document.getElementById('hots');
+const netf = document.getElementById('netf');
 const netflixElements = document.querySelectorAll('.netflix');
 const netflixBG = document.querySelectorAll('.netflix-bg');
 const followIconHover = document.querySelectorAll('.follow-icon');
+const ftLink = document.querySelectorAll('.ft-link');
 
 hots.addEventListener('click', function () {
     netflixElements.forEach(function (netflix) {
@@ -222,6 +224,28 @@ hots.addEventListener('click', function () {
     });
     followIconHover.forEach(function (icon) {
         icon.classList.remove('hover:bg-red-600');
-        icon.classList.add('hover:bg-blue-700');
+        icon.classList.add('hover:bg-blue-600');
+    });
+    ftLink.forEach(function (link) {
+        link.classList.remove('hover:text-red-600');
+        link.classList.add('hover:text-blue-600');
+    });
+});
+netf.addEventListener('click', function () {
+    netflixElements.forEach(function (netflix) {
+        netflix.classList.add('netflix');
+        netflix.classList.remove('hotstar');
+    });
+    netflixBG.forEach(function (netflix) {
+        netflix.classList.add('netflix-bg');
+        netflix.classList.remove('hotstar-bg');
+    });
+    followIconHover.forEach(function (icon) {
+        icon.classList.remove('hover:bg-blue-600');
+        icon.classList.add('hover:bg-red-600');
+    });
+    ftLink.forEach(function (link) {
+        link.classList.remove('hover:text-blue-600');
+        link.classList.add('hover:text-red-600');
     });
 });

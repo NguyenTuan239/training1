@@ -198,7 +198,7 @@
     }
 }
 .continue-watch-item{
-    width: 44vw;
+    width: 45vw;
     height: 80px;
     background-position: center;
 }
@@ -221,10 +221,7 @@
 .prev-next{
     font-size: 23px;
     color: gray;
-    transition: hover 0.5s;
-    &:hover{
-        color: red;
-    }
+    transition: 0.5s;
 }
 @media (min-width: 768px){
     .continue-watch-item{

@@ -95,12 +95,6 @@ body{
         color: white;
     }
 }
-.ft-link{
-    transition: all 0.4s ease-in-out;
-    &:hover{
-        color: red;
-    }
-}
 .follow-icon{
     transform-origin: center bottom;
     transition: all 0.4s ease-in-out;
