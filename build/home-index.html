@@ -233,7 +233,6 @@
                 </ul>
               </div>
         </section>
-        
     </header>
     <div id="setting-icon" class="fixed right-0 top-32 h-10 w-10 z-50 cursor-pointer bg-black flex justify-center items-center">
       <i class="fa-solid fa-gear fa-lg text-white "></i>
@@ -252,14 +251,14 @@
       </div>
       <h3 class="text-md">Color Customizer</h3>
       <div class="grid grid-cols-2 gap-4">
-        <button class="border border-black bg-black text-white py-1 rounded-sm">Netflix</button>
-        <button class="border border-black text-zinc-700 py-1 rounded-sm">Hotstar</button>
-        <button class="border border-black text-zinc-700 py-1 rounded-sm">Prime</button>
-        <button class="border border-black text-zinc-700 py-1 rounded-sm">Hulu</button>
+        <button id="netf" class="border border-black bg-black text-white py-1 rounded-sm">Netflix</button>
+        <button id="hots" class="border border-black text-zinc-700 py-1 rounded-sm">Hotstar</button>
+        <button id="pri" class="border border-black text-zinc-700 py-1 rounded-sm">Prime</button>
+        <button id="hul" class="border border-black text-zinc-700 py-1 rounded-sm">Hulu</button>
       </div>
     </div>
-    <main>
-      <section class="w-full section-1">
+    <main class="w-full overflow-hidden">
+      <section class="section-1 w-full">
         <div id="slide1">
           <div class="item1 bg-[url('../image/movie/ott1.webp')]">
             <div class="moviePoster text-gray-300 p-3">
@@ -349,6 +348,55 @@
           <i id="nextButton" class="fa-solid fa-circle-chevron-right fa-2xl text-gray-600 ft-link"></i>
         </div>
       </section>
+      <section class="section-2 relative text-white font-light mx-auto my-6 w-11/12 overflow-hidden">
+        <h2 class="text-xl md:text-2xl mb-6 mt-2">Continue Watching</h2>
+        <div class="flex gap-4 "> 
+          <div class="relative flex-shrink-0 continue-watch-item bg-[url('../image/continue-watch/05.webp')] bg-cover">
+            <div class="absolute bottom-0 left-0 h-0.5 netflix-bg" style="width: 30%;"></div>
+            <div class="absolute bottom-0 right-0 h-0.5 bg-gray-500" style="width: 70%;"></div>
+            <span class="absolute bottom-2 left-2 text-gray-300">70 of 230 m</span>
+          </div>
+          <div class="relative flex-shrink-0 continue-watch-item bg-[url('../image/continue-watch/05.webp')] bg-cover">
+            <div class="absolute bottom-0 left-0 h-0.5 netflix-bg" style="width: 30%;"></div>
+            <div class="absolute bottom-0 right-0 h-0.5 bg-gray-500" style="width: 70%;"></div>
+            <span class="absolute bottom-2 left-2 text-gray-300">70 of 230 m</span>
+          </div>
+          <div class="relative flex-shrink-0 continue-watch-item bg-[url('../image/continue-watch/05.webp')] bg-cover">
+            <div class="absolute bottom-0 left-0 h-0.5 netflix-bg" style="width: 30%;"></div>
+            <div class="absolute bottom-0 right-0 h-0.5 bg-gray-500" style="width: 70%;"></div>
+            <span class="absolute bottom-2 left-2 text-gray-300">70 of 230 m</span>
+          </div>
+          <div class="relative flex-shrink-0 continue-watch-item bg-[url('../image/continue-watch/05.webp')] bg-cover">
+            <div class="absolute bottom-0 left-0 h-0.5 netflix-bg" style="width: 30%;"></div>
+            <div class="absolute bottom-0 right-0 h-0.5 bg-gray-500" style="width: 70%;"></div>
+            <span class="absolute bottom-2 left-2 text-gray-300">70 of 230 m</span>
+          </div>
+          <div class="relative flex-shrink-0 continue-watch-item bg-[url('../image/continue-watch/05.webp')] bg-cover">
+            <div class="absolute bottom-0 left-0 h-0.5 netflix-bg" style="width: 30%;"></div>
+            <div class="absolute bottom-0 right-0 h-0.5 bg-gray-500" style="width: 70%;"></div>
+            <span class="absolute bottom-2 left-2 text-gray-300">70 of 230 m</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-circle-chevron-left prev-next absolute top-24 md:top-36 left-0"></i>
+        <i class="fa-solid fa-circle-chevron-right prev-next absolute top-24 md:top-36 right-0"></i>
+      </section>
+      <section class="section-3 relative text-white font-light mx-auto my-6 w-11/12">
+        <h2 class="text-xl md:text-2xl mb-6 mt-2 flex justify-between"><span>Top ten Movie To Watch</span><span class="netflix">View All</span></h2>
+        <div class="flex gap-7">
+          <div class="relative topten-item">
+            <img src="./image/continue-watch/05.webp" alt="">
+            <div class="topten-number movie-poster-hl text-5xl font-extrabold">1</div>
+          </div>
+          <div class="relative topten-item">
+            <img src="./image/continue-watch/05.webp" alt="">
+            <div class="topten-number movie-poster-hl text-5xl font-extrabold">1</div>
+          </div>
+          <div class="relative topten-item">
+            <img src="./image/continue-watch/05.webp" alt="">
+            <div class="topten-number movie-poster-hl text-5xl font-extrabold">1</div>
+          </div>
+        </div>
+      </section>
     </main>
     <hr class="mx-auto w-11/12 border-slate-700">
     <footer>
@@ -394,10 +442,10 @@
             <div class="mt-10 flex gap-4 items-center">
               <span class="text-nowrap">Follow Us:</span>
             <span class=" flex justify-start items-center gap-3 w-auto flex-wrap">
-              <span class="follow-icon rounded-full bg-slate-700 cursor-pointer"><i class="fa-brands fa-facebook p-2"></i></span>
-              <span class="follow-icon rounded-full bg-slate-700 cursor-pointer"><i class="fa-brands fa-twitter p-2"></i></span>
-              <span class="follow-icon rounded-full bg-slate-700 cursor-pointer"><i class="fa-brands fa-github p-2"></i></span>
-              <span class="follow-icon rounded-full bg-slate-700 cursor-pointer"><i class="fa-brands fa-instagram p-2"></i></span>
+              <span class="follow-icon rounded-full bg-slate-700 cursor-pointer hover:bg-red-600"><i class="fa-brands fa-facebook p-2"></i></span>
+              <span class="follow-icon rounded-full bg-slate-700 cursor-pointer hover:bg-red-600"><i class="fa-brands fa-twitter p-2"></i></span>
+              <span class="follow-icon rounded-full bg-slate-700 cursor-pointer hover:bg-red-600"><i class="fa-brands fa-github p-2"></i></span>
+              <span class="follow-icon rounded-full bg-slate-700 cursor-pointer hover:bg-red-600"><i class="fa-brands fa-instagram p-2"></i></span>
             </span>
             </div>
           </div>

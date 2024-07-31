@@ -197,4 +197,47 @@
         right: 490px;
     }
 }
-
+.continue-watch-item{
+    width: 44vw;
+    height: 80px;
+    background-position: center;
+}
+.topten-item{
+    width: 44vw;
+    height: auto;
+    flex-shrink: 0;
+}
+.topten-number{
+    position: absolute;
+    transform: translateY(-50%);
+    right: 0;
+    transition: 1s;
+}
+.topten-item:hover{
+    .topten-number{
+        transform: translateY(-100%);
+    }
+}
+.prev-next{
+    font-size: 23px;
+    color: gray;
+    transition: hover 0.5s;
+    &:hover{
+        color: red;
+    }
+}
+@media (min-width: 768px){
+    .continue-watch-item{
+        width: 29vw;
+        height: 170px;
+    }
+    .prev-next{
+        font-size: 35px;
+    }
+}
+@media (min-width: 1024px){
+    .continue-watch-item{
+        width: 17.5vw;
+        height: 200px;
+    }
+}

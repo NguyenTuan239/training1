@@ -164,7 +164,6 @@ settingIcon.addEventListener('click',function(){
     }else{
         settingBar.classList.remove('reve')
     }
-    
 });
 settingBarEx.addEventListener('click',function(){
     if(settingBar.classList.contains('reactive')){
@@ -206,4 +205,23 @@ ltr.addEventListener('click', function() {
     this.classList.remove('text-zinc-700');
     rlt.classList.remove('bg-black', 'text-white');
     rlt.classList.add('text-zinc-700');
+});
+const hots = document.getElementById('hots');
+const netflixElements = document.querySelectorAll('.netflix');
+const netflixBG = document.querySelectorAll('.netflix-bg');
+const followIconHover = document.querySelectorAll('.follow-icon');
+
+hots.addEventListener('click', function () {
+    netflixElements.forEach(function (netflix) {
+        netflix.classList.add('hotstar');
+        netflix.classList.remove('netflix');
+    });
+    netflixBG.forEach(function (netflix) {
+        netflix.classList.add('hotstar-bg');
+        netflix.classList.remove('netflix');
+    });
+    followIconHover.forEach(function (icon) {
+        icon.classList.remove('hover:bg-red-600');
+        icon.classList.add('hover:bg-blue-700');
+    });
 });
