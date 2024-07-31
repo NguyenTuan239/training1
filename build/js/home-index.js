@@ -210,8 +210,8 @@ const hots = document.getElementById('hots');
 const netf = document.getElementById('netf');
 const netflixElements = document.querySelectorAll('.netflix');
 const netflixBG = document.querySelectorAll('.netflix-bg');
-const followIconHover = document.querySelectorAll('.follow-icon');
-const ftLink = document.querySelectorAll('.ft-link');
+const hoverBg = document.querySelectorAll('.follow-icon');
+const hoverText = document.querySelectorAll('.ft-link');
 
 hots.addEventListener('click', function () {
     netflixElements.forEach(function (netflix) {
@@ -220,15 +220,15 @@ hots.addEventListener('click', function () {
     });
     netflixBG.forEach(function (netflix) {
         netflix.classList.add('hotstar-bg');
-        netflix.classList.remove('netflix');
+        netflix.classList.remove('netflix-bg');
     });
-    followIconHover.forEach(function (icon) {
-        icon.classList.remove('hover:bg-red-600');
-        icon.classList.add('hover:bg-blue-600');
+    hoverBg.forEach(function (icon) {
+        icon.classList.remove('hover-bg-red');
+        icon.classList.add('hover-bg-blue');
     });
-    ftLink.forEach(function (link) {
-        link.classList.remove('hover:text-red-600');
-        link.classList.add('hover:text-blue-600');
+    hoverText.forEach(function (link) {
+        link.classList.remove('hover-red');
+        link.classList.add('hover-blue');
     });
 });
 netf.addEventListener('click', function () {
@@ -240,12 +240,12 @@ netf.addEventListener('click', function () {
         netflix.classList.add('netflix-bg');
         netflix.classList.remove('hotstar-bg');
     });
-    followIconHover.forEach(function (icon) {
-        icon.classList.remove('hover:bg-blue-600');
-        icon.classList.add('hover:bg-red-600');
+    hoverBg.forEach(function (icon) {
+        icon.classList.remove('hover-bg-blue');
+        icon.classList.add('hover-bg-red');
     });
-    ftLink.forEach(function (link) {
-        link.classList.remove('hover:text-blue-600');
-        link.classList.add('hover:text-red-600');
+    hoverText.forEach(function (link) {
+        link.classList.remove('hover-blue');
+        link.classList.add('hover-red');
     });
 });

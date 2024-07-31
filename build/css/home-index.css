@@ -127,3 +127,15 @@ body{
 .hotstar-bg{
     background-color: rgb(0, 81, 255);
 }
+.hover-red:hover {
+    color: red;
+}
+.hover-blue:hover {
+    color: blue;
+}
+.hover-bg-red:hover {
+    background-color: red;
+}
+.hover-bg-blue:hover {
+    background-color: blue;
+}
