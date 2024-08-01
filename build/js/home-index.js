@@ -208,44 +208,147 @@ ltr.addEventListener('click', function() {
 });
 const hots = document.getElementById('hots');
 const netf = document.getElementById('netf');
-const netflixElements = document.querySelectorAll('.netflix');
+const pri = document.getElementById('pri');
+const hul = document.getElementById('hul');
+const netflixText = document.querySelectorAll('.netflix');
 const netflixBG = document.querySelectorAll('.netflix-bg');
 const hoverBg = document.querySelectorAll('.follow-icon');
-const hoverText = document.querySelectorAll('.ft-link');
+const hoverText = document.querySelectorAll('.hover-red');
+const hoverWebnav = document.querySelectorAll('.web-nav-li');
+const logo = document.querySelectorAll('.logo');
 
 hots.addEventListener('click', function () {
-    netflixElements.forEach(function (netflix) {
+    netflixText.forEach(function (netflix) {
         netflix.classList.add('hotstar');
-        netflix.classList.remove('netflix');
+        netflix.classList.remove('netflix','prime','hulu');
     });
     netflixBG.forEach(function (netflix) {
         netflix.classList.add('hotstar-bg');
-        netflix.classList.remove('netflix-bg');
+        netflix.classList.remove('netflix-bg','prime-bg','hulu-bg');
     });
     hoverBg.forEach(function (icon) {
-        icon.classList.remove('hover-bg-red');
+        icon.classList.remove('hover-bg-red','hover-bg-cyan','hover-bg-green');
         icon.classList.add('hover-bg-blue');
     });
     hoverText.forEach(function (link) {
-        link.classList.remove('hover-red');
+        link.classList.remove('hover-red','hover-cyan','hover-green');
         link.classList.add('hover-blue');
     });
+    hoverWebnav.forEach(function (link) {
+        link.classList.remove('web-nav-li-red','web-nav-li-cyan','web-nav-li-green');
+        link.classList.add('web-nav-li-blue');
+    });
+    logo.forEach(function (link) {
+        link.classList.remove('logo-cyan','logo-green');
+        link.classList.add('logo-blue');
+    });
+    this.classList.add('bg-black', 'text-white');
+    this.classList.remove('text-zinc-700');
+    netf.classList.remove('bg-black', 'text-white');
+    netf.classList.add('text-zinc-700');
+    pri.classList.remove('bg-black', 'text-white');
+    pri.classList.add('text-zinc-700');
+    hul.classList.remove('bg-black', 'text-white');
+    hul.classList.add('text-zinc-700');
 });
 netf.addEventListener('click', function () {
-    netflixElements.forEach(function (netflix) {
+    netflixText.forEach(function (netflix) {
         netflix.classList.add('netflix');
-        netflix.classList.remove('hotstar');
+        netflix.classList.remove('hotstar','prime','hulu');
     });
     netflixBG.forEach(function (netflix) {
         netflix.classList.add('netflix-bg');
-        netflix.classList.remove('hotstar-bg');
+        netflix.classList.remove('hotstar-bg','prime-bg','hulu-bg');
     });
     hoverBg.forEach(function (icon) {
-        icon.classList.remove('hover-bg-blue');
+        icon.classList.remove('hover-bg-blue','hover-bg-cyan','hover-bg-green');
         icon.classList.add('hover-bg-red');
     });
     hoverText.forEach(function (link) {
-        link.classList.remove('hover-blue');
+        link.classList.remove('hover-blue','hover-cyan','hover-green');
         link.classList.add('hover-red');
     });
+    hoverWebnav.forEach(function (link) {
+        link.classList.remove('web-nav-li-blue','web-nav-li-cyan','web-nav-li-green');
+        link.classList.add('web-nav-li-red');
+    });
+    logo.forEach(function (link) {
+        link.classList.remove('logo-cyan','logo-green','logo-blue');
+    });
+    this.classList.add('bg-black', 'text-white');
+    this.classList.remove('text-zinc-700');
+    hots.classList.remove('bg-black', 'text-white');
+    hots.classList.add('text-zinc-700');
+    pri.classList.remove('bg-black', 'text-white');
+    pri.classList.add('text-zinc-700');
+    hul.classList.remove('bg-black', 'text-white');
+    hul.classList.add('text-zinc-700');
+});
+pri.addEventListener('click', function () {
+    netflixText.forEach(function (netflix) {
+        netflix.classList.add('prime');
+        netflix.classList.remove('hotstar','netflix','hulu');
+    });
+    netflixBG.forEach(function (netflix) {
+        netflix.classList.add('prime-bg');
+        netflix.classList.remove('hotstar-bg','netflix-bg','hulu-bg');
+    });
+    hoverBg.forEach(function (icon) {
+        icon.classList.remove('hover-bg-blue','hover-bg-red','hover-bg-green');
+        icon.classList.add('hover-bg-cyan');
+    });
+    hoverText.forEach(function (link) {
+        link.classList.remove('hover-blue','hover-red','hover-green');
+        link.classList.add('hover-cyan');
+    });
+    hoverWebnav.forEach(function (link) {
+        link.classList.remove('web-nav-li-blue','web-nav-li-red','web-nav-li-green');
+        link.classList.add('web-nav-li-cyan');
+    });
+    logo.forEach(function (link) {
+        link.classList.remove('logo-green','logo-blue');
+        link.classList.add('logo-cyan');
+    });
+    this.classList.add('bg-black', 'text-white');
+    this.classList.remove('text-zinc-700');
+    hots.classList.remove('bg-black', 'text-white');
+    hots.classList.add('text-zinc-700');
+    netf.classList.remove('bg-black', 'text-white');
+    netf.classList.add('text-zinc-700');
+    hul.classList.remove('bg-black', 'text-white');
+    hul.classList.add('text-zinc-700');
+});
+hul.addEventListener('click', function () {
+    netflixText.forEach(function (netflix) {
+        netflix.classList.add('hulu');
+        netflix.classList.remove('hotstar','netflix','prime');
+    });
+    netflixBG.forEach(function (netflix) {
+        netflix.classList.add('hulu-bg');
+        netflix.classList.remove('hotstar-bg','netflix-bg','prime-bg');
+    });
+    hoverBg.forEach(function (icon) {
+        icon.classList.remove('hover-bg-blue','hover-bg-red','hover-bg-cyan');
+        icon.classList.add('hover-bg-green');
+    });
+    hoverText.forEach(function (link) {
+        link.classList.remove('hover-blue','hover-red','hover-cyan');
+        link.classList.add('hover-green');
+    });
+    hoverWebnav.forEach(function (link) {
+        link.classList.remove('web-nav-li-blue','web-nav-li-red','web-nav-li-cyan');
+        link.classList.add('web-nav-li-green');
+    });
+    logo.forEach(function (link) {
+        link.classList.remove('logo-cyan','logo-blue');
+        link.classList.add('logo-green');
+    });
+    this.classList.add('bg-black', 'text-white');
+    this.classList.remove('text-zinc-700');
+    hots.classList.remove('bg-black', 'text-white');
+    hots.classList.add('text-zinc-700');
+    netf.classList.remove('bg-black', 'text-white');
+    netf.classList.add('text-zinc-700');
+    pri.classList.remove('bg-black', 'text-white');
+    pri.classList.add('text-zinc-700');
 });

@@ -83,10 +83,10 @@ body{
     border-left-width: 3.5px;
     border-color: transparent;
     transition: all 0.5s ease-in;
-    &:hover{
-        background-image: linear-gradient(to right, rgba(255, 0, 0, 0.1),rgb(41, 37, 36,0));
-        border-color: rgb(239 68 68);
-    }
+}
+.web-nav-li-red:hover{
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.1),rgb(41, 37, 36,0));
+    border-color: rgb(239 68 68);
 }
 .li-font{
     font-weight: 300;
@@ -115,6 +115,22 @@ body{
         transform: translateX(-100%);
     }
 }
+.reset{
+    transition: 0.5s;
+}
+.reset-text{
+    position: absolute;
+    font-size:small;
+    top: 22px;
+    right: 115px;
+    background-color: white;
+    opacity: 0;
+}
+.reset:hover{
+    .reset-text{
+        opacity: 1;
+    }
+}
 .netflix{
     color: rgb(226, 29, 29);
 }
@@ -127,15 +143,60 @@ body{
 .hotstar-bg{
     background-color: rgb(0, 81, 255);
 }
+.prime{
+    color: cyan;
+}
+.prime-bg{
+    background-color: rgb(0, 184, 184);
+}
+.hulu{
+    color: greenyellow;
+}
+.hulu-bg{
+    background-color: rgb(99, 165, 0);
+}
 .hover-red:hover {
     color: red;
 }
 .hover-blue:hover {
     color: blue;
 }
+.hover-cyan:hover {
+    color: cyan;
+}
+.hover-green:hover {
+    color: greenyellow;
+}
 .hover-bg-red:hover {
     background-color: red;
 }
 .hover-bg-blue:hover {
     background-color: blue;
+}
+.hover-bg-cyan:hover {
+    background-color: cyan;
+}
+.hover-bg-green:hover {
+    background-color: greenyellow;
+}
+.web-nav-li-blue:hover{
+    background-image: linear-gradient(to right, rgba(0, 38, 255, 0.1),rgb(41, 37, 36,0));
+    border-color: rgb(0, 47, 255);
+}
+.web-nav-li-cyan:hover{
+    background-image: linear-gradient(to right, rgb(0, 255, 255, 0.1),rgb(41, 37, 36,0));
+    border-color: cyan;
+}
+.web-nav-li-green:hover{
+    background-image: linear-gradient(to right, rgb(173, 255, 47, 0.1),rgb(41, 37, 36,0));
+    border-color: greenyellow;
+}
+.logo-blue{
+    filter: hue-rotate(245deg);
+}
+.logo-cyan{
+    filter: sepia(1) hue-rotate(180deg) saturate(2);
+}
+.logo-green{
+    filter: sepia(1) hue-rotate(75deg) saturate(6);
 }
